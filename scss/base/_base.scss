@@ -1,2 +1,164 @@
 /* Base
 ================================================== */
+
+html {
+  font-family: $font-stack-ptsans;
+  font-size: $font-size;
+	overflow-x: hidden;
+}
+
+.product, .shipping, .summary {
+  padding: 1rem;
+  width: 350px;
+  min-height: 625px;
+}
+
+input[type=radio]:checked + label{
+  border: 2px solid blue;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+button {
+  height: 50px;
+  width: 100%;
+  background-color: $green;
+  color: $light-grey;
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin-top: 85%;
+  cursor: pointer;
+}
+
+#size {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio1{
+  font-weight: 900;
+	color: $black;
+	background-color: #E0E0E0;
+	text-align: center;
+	height: 50px;
+  width: 100px;
+	line-height: 50px;
+	cursor: pointer;
+  margin: 1rem 0 3rem 0;
+}
+
+#color {
+  display: flex;
+  justify-content: space-between;
+  text-indent: -9999px;
+
+  & label {
+    height: 50px;
+    width: 70px;
+  	cursor: pointer;
+    margin: 1rem 0 3rem 0;
+  }
+}
+
+.green{
+	background-color: $green;
+}
+
+.red{
+	background-color: $red;
+}
+
+.black{
+	background-color: $dark-grey;
+}
+
+.blue{
+	background-color: $blue;
+}
+
+.product {
+  background-color: $white;
+
+  & p {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight: 900;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  & form ul {
+    display: flex;
+  }
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.shipping {
+  background-color: $light-grey;
+
+  & label {
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  & select {
+    appearance: none;
+  }
+
+  & input, select {
+    background-color: $fill;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+  }
+}
+
+// Summary
+
+.summary {
+  background-color: $grey;
+
+  & p {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & h4 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #p-ship {
+    opacity: .5;
+  }
+}
+
+hr {
+  margin: 2rem 0 2rem 0;
+  color: $light-grey;
+  opacity: .2;
+}
+
+address {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: $dark-grey;
+  opacity: .8;
+  font-style: italic;
+}
