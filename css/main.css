@@ -1,2 +1,247 @@
+/* Main SCSS
+================================================== */
+/* Variables
+================================================== */
+/* Mixins
+================================================== */
+/* Placeholders
+================================================== */
+/* CSS RESET
+==================================================
+================================================== */
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Caption");
+html, body, div, main, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, button, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, textarea,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+::before, ::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+/* HTML5 - Older browser support
+================================================== */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* BODY
+================================================== */
 body {
-  background-color: purple; }
+  line-height: 1; }
+
+/* LISTS - Clear bullets
+================================================== */
+ol, ul {
+  list-style: none; }
+
+/* QUOTES
+================================================== */
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* TABLES
+================================================== */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Base
+================================================== */
+html {
+  font-family: "PT Sans", sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden; }
+
+.product, .shipping, .summary {
+  padding: 1rem;
+  width: 350px;
+  min-height: 625px; }
+
+input[type=radio]:checked + label {
+  border: 2px solid blue; }
+
+img {
+  width: 300px;
+  height: 300px; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+
+button {
+  height: 50px;
+  width: 100%;
+  background-color: #27AE61;
+  color: #F2F2F2;
+  font-weight: 900;
+  font-size: 1.6rem;
+  margin-top: 85%;
+  cursor: pointer; }
+
+#size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.radio1 {
+  font-weight: 900;
+  color: #000;
+  background-color: #E0E0E0;
+  text-align: center;
+  height: 50px;
+  width: 100px;
+  line-height: 50px;
+  cursor: pointer;
+  margin: 1rem 0 3rem 0; }
+
+#color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-indent: -9999px; }
+  #color label {
+    height: 50px;
+    width: 70px;
+    cursor: pointer;
+    margin: 1rem 0 3rem 0; }
+
+.green {
+  background-color: #27AE61; }
+
+.red {
+  background-color: #EB5757; }
+
+.black {
+  background-color: #4F4F4F; }
+
+.blue {
+  background-color: #2C9CDB; }
+
+.product {
+  background-color: #FFF; }
+  .product p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-weight: 900;
+    font-size: 2.4rem;
+    margin-bottom: 2rem; }
+  .product form ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+input[type=radio] {
+  display: none; }
+
+.shipping {
+  background-color: #F2F2F2; }
+  .shipping label {
+    margin-bottom: 5px;
+    display: block; }
+  .shipping select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none; }
+  .shipping input, .shipping select {
+    background-color: #EEE;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 1px; }
+
+.summary {
+  background-color: #E8E8E8; }
+  .summary p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .summary h4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .summary #p-ship {
+    opacity: .5; }
+
+hr {
+  margin: 2rem 0 2rem 0;
+  color: #F2F2F2;
+  opacity: .2; }
+
+address {
+  line-height: 1.5;
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: #4F4F4F;
+  opacity: .8;
+  font-style: italic; }
+
+/* Typography
+================================================== */
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem; }
+
+h4 {
+  font-size: 1.6rem;
+  color: #000;
+  font-weight: 900; }
+
+label {
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: #4F4F4F; }
+
+p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #4F4F4F; }
